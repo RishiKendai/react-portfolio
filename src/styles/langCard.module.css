@@ -1,0 +1,78 @@
+.card {
+  flex: 1 0 1;
+  min-width: 220px;
+  padding: 1rem 0;
+  min-height: 200px;
+  background: hsl(0 100% 100% / 0.13);
+  backdrop-filter: blur(20px);
+  box-shadow: 4px 8px 22px hsl(0 0% 0% / 0.22);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  user-select: none;
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.image {
+  height: 80px;
+  width: 80px;
+  overflow: hidden;
+}
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+.stars i {
+  color: hsl(0 0% 0% / 0.22);
+}
+
+.stars[data-stars="5"] i {
+  color: #ffdf00;
+}
+.stars[data-stars="4"] i:nth-child(-n + 4) {
+  color: #ffdf00;
+}
+.stars[data-stars="3"] i:nth-child(-n + 3) {
+  color: #ffdf00;
+}
+.stars[data-stars="2"] i:nth-child(-n + 2) {
+  color: #ffdf00;
+}
+.stars[data-stars="1"] i:nth-child(-n + 1) {
+  color: #ffdf00;
+}
+
+.line {
+  height: 1px;
+  width: 80%;
+  margin: 0.9rem auto;
+  background: var(--accent);
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+.bottom .wrapper {
+  display: flex;
+  width: 80%;
+}
+.bottom .wrapper label {
+  flex: 60%;
+}
+.bottom .wrapper p {
+  flex: 40%;
+}

@@ -1,13 +1,40 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Norican&family=Poppins&family=Rancho&display=swap");
+
+:root {
+  --font-norican: "Norican", cursive;
+  --font-poppins: "Poppins", sans-serif;
+  --font-rancho: "Rancho", cursive;
+  --font-default: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+  --primary: #15161e;
+  --secondary: #9fff02;
+  --accent: #02fcfc;
+  --color: hsl(0 100% 100%/ 0.67);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+[theme="light"] {
+  --primary: #e7e8f1;
+  --secondary: #ff8a1e;
+  --accent: #6602fc;
+  --color: hsl(0 0% 0%/ 0.7);
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+html::-webkit-scrollbar {
+  width: 0;
+  background: none;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-default);
 }

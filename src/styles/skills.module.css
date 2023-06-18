@@ -1,0 +1,135 @@
+.skillsSection {
+  background-color: var(--primary);
+  color: var(--color);
+  min-height: 100vh;
+  --arrow-bg: hsl(0 100% 100% / 0.33);
+  --arrow-color: hsl(0 0% 0% / 0.52);
+}
+[theme="light"] {
+  --arrow-bg: hsl(0 0% 0% / 0.33);
+  --arrow-color: hsl(0 100% 100% / 0.52);
+}
+
+.main {
+  flex: 1;
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.languages {
+  padding: 8px 12px;
+  background: hsl(234 13% 28% / 0.13);
+  border-radius: 27px;
+  border: 0.6px solid hsl(233 85% 84% / 0.1);
+  box-shadow: 7px 14px 34px hsl(0 0% 0% / 0.19);
+}
+.languageWrapper {
+  min-width: 490px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.76rem;
+}
+.image {
+  height: 50px;
+  width: 50px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.progressBar {
+  flex: 1 1 60%;
+  height: 8px;
+  border-radius: 50px;
+  background: hsl(234 15% 25% / 0.32);
+  border: 1px solid hsl(231 7% 19% / 0.55);
+  position: relative;
+}
+.progress {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 50px;
+  background: hsl(231 10% 27%);
+  opacity: 0;
+}
+.progress::after {
+  position: absolute;
+  content: attr(data-width);
+  top: -9px;
+  font-weight: 900;
+  right: 0;
+  color: var(--accent);
+  min-height: 27px;
+  min-width: 27px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  width: fit-content;
+  background: hsl(230 12% 37% / 0.65);
+  box-shadow: inset -3px -4px 6px hsl(0 0% 0% / 0.66),
+    inset 4px 6px 9px hsl(229 12% 38% / 0.38);
+}
+[data-width="82%"] {
+  animation: java 0.5s forwards 0.6s linear;
+}
+[data-width="85%"] {
+  animation: js 0.75s forwards 0.6s linear;
+}
+[data-width="62%"] {
+  animation: python 1s forwards 0.75s linear;
+}
+[data-width="76%"] {
+  animation: c 1.5s forwards 0.6s linear;
+}
+[data-width="43%"] {
+  animation: cpp 1.25s forwards 0.6s linear;
+}
+
+@keyframes java {
+  100% {
+    width: 82%;
+    opacity: 1;
+  }
+}
+@keyframes js {
+  100% {
+    width: 85%;
+    opacity: 1;
+  }
+}
+@keyframes python {
+  100% {
+    width: 62%;
+    opacity: 1;
+  }
+}
+@keyframes c {
+  100% {
+    width: 76%;
+    opacity: 1;
+  }
+}
+@keyframes cpp {
+  100% {
+    width: 43%;
+    opacity: 1;
+  }
+}
+
+.technologies {
+  width: 470px;
+  padding: 8px 12px;
+  background: hsl(234 13% 28% / 0.13);
+  border-radius: 27px;
+  border: 0.6px solid hsl(233 85% 84% / 0.1);
+  box-shadow: 7px 14px 34px hsl(0 0% 0% / 0.19);
+}

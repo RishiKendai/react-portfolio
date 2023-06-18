@@ -1,0 +1,25 @@
+.projectSection {
+  background-color: var(--primary);
+  color: var(--color);
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2rem;
+    padding: 1rem;
+  }
+}

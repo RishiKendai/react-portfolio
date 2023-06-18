@@ -1,0 +1,68 @@
+.card {
+  width: 340px;
+  min-height: 230px;
+  margin-bottom: 2rem;
+}
+.card .image {
+  border-radius: 14px;
+  height: 190px;
+  width: 100%;
+  background: var(--primary);
+  backdrop-filter: blur(25px);
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s;
+}
+.image::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    transparent,
+    var(--accent),
+    var(--accent),
+    var(--accent),
+    transparent
+  );
+  animation: animate 7s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+.image::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: var(--primary);
+  border-radius: 14px;
+}
+.image img {
+  border-radius: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 14px);
+  height: calc(100% - 14px);
+  filter: brightness(95%);
+}
+
+.image:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    margin-bottom: 0;
+  }
+}

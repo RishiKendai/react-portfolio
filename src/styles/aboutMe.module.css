@@ -1,0 +1,56 @@
+.aboutMeSection {
+  background-color: var(--primary);
+  color: var(--color);
+  min-height: 100vh;
+}
+
+.illustrationAboutMe {
+  margin: 0 auto;
+  height: 275px;
+  width: 275px;
+  z-index: 1;
+}
+.illustrationAboutMe img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: drop-shadow(0 0 245px var(--accent));
+}
+
+@media screen and (min-width: 768px) {
+  .about {
+    grid-area: about;
+    margin: 0;
+  }
+  .illustrationAboutMe {
+    grid-area: illustrationAboutMe;
+    height: 300px;
+    width: 300px;
+  }
+  .quotes {
+    grid-area: quotes;
+    margin: 0;
+  }
+  .footer {
+    grid-area: footer;
+    margin: 0;
+  }
+  .main {
+    width: 88%;
+    display: grid;
+    align-content: center;
+    gap: 1rem;
+    grid-template-rows: min-content;
+    grid-template-areas:
+    "about illustrationAboutMe"
+    "quotes illustrationAboutMe"
+    "footer footer";
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .illustrationAboutMe{
+    width: 370px;
+    height: 370px;
+  }
+}

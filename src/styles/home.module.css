@@ -1,0 +1,89 @@
+.homeSection {
+  background-color: var(--primary);
+  color: var(--color);
+  min-height: 100vh;
+}
+.homeWrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+}
+.names {
+  width: 80%;
+}
+
+.illustratorHome {
+  height: 275px;
+  width: 275px;
+  position: relative;
+  z-index: 1;
+}
+.illustratorHome img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: drop-shadow(0 0 245px var(--accent));
+}
+.resumeWrap {
+  margin: 1rem 0;
+  align-self: center;
+}
+.resume {
+  padding: 8px 2rem;
+  font: 600 1.3rem var(--font-poppins);
+  letter-spacing: 2px;
+  color: var(--color);
+  border-radius: 50px;
+  box-shadow: inset -3px -3px 18px hsl(80 27% 94% / 0.08),
+    inset 3px 3px 8px hsl(82 52% 96% / 0.12);
+  backdrop-filter: blur(24px);
+}
+
+[theme="light"] .resume {
+  box-shadow: inset -3px -3px 18px hsl(80 5% 12% / 0.1),
+    inset 3px 3px 8px hsl(90 7% 6% / 0.12);
+}
+
+@media screen and (min-width: 768px) {
+  .names {
+    margin: 0 auto;
+    grid-area: names;
+    align-self: center;
+    height: auto;
+    width: 100%;
+  }
+  .illustratorHome {
+    height: 350px;
+    width: 350px;
+    grid-area: illustrator_home;
+    margin-bottom: 0;
+  }
+  .resumeWrap {
+    margin: 0;
+    grid-area: resume;
+    align-self: center;
+    justify-self: start;
+  }
+  .socialIconsDiv {
+    margin: 0 0;
+    grid-area: socialIconsDiv;
+    align-self: flex-start;
+    justify-self: start;
+  }
+  .names,
+  .resumeWrap,
+  .socialIconsDiv {
+    padding-left: 1rem;
+  }
+  .homeWrapper {
+    align-content: center;
+    column-gap: 1rem;
+    grid-template-rows: min-content;
+    display: grid;
+    grid-template-areas:
+      "names illustrator_home"
+      "resume illustrator_home"
+      "socialIconsDiv  illustrator_home";
+  }
+}
